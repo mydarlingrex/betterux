@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="main.js" defer></script>
+    <title>BetterUX™ — Сделаем ваш опыт хуже</title>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">better<span>UX</span>™</div>
+
+    <nav>
+        <a href="#">Philosophy</a>
+        <a href="#">Case studies</a>
+        <button class="nav-button" onclick="openModal()">
+            Get started
+        </button>
+    </nav>
+</header>
+
+
+<main>
+    <section class="hero">
+
+        <div class="copy">
+
+            <div class="eyebrow">
+                <span class="dot"></span>
+                New experience available
+            </div>
+
+            <h1>
+                We make<br>
+                <span>UX worse.</span>
+            </h1>
+
+            <p class="subtitle">
+                Finally, a digital product that understands what users
+                <strong>really want:</strong> more clicks, more friction,
+                and absolutely no idea what is going on.
+            </p>
+
+            <form class="signup" id="signupForm">
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="your.email@probably.com"
+                    autocomplete="off"
+                >
+
+                <button type="submit">
+                    Improve my UX
+                </button>
+
+            </form>
+
+            <div class="microcopy">
+                No spam. No value. No unsubscribe.
+            </div>
+
+        </div>
+
+
+        <div class="visual">
+
+            <div class="floating one">
+                ✦ 14 unnecessary interactions
+            </div>
+
+            <div class="floating two">
+                user satisfaction: pending...
+            </div>
+
+            <div class="card">
+
+                <div class="card-header">
+                    <span>USER EXPERIENCE</span>
+                    <span>•••</span>
+                </div>
+
+                <div class="fake-title">
+                    You are almost there.
+                </div>
+
+                <div class="fake-text">
+                    We have carefully designed this interface
+                    to make sure completing a simple task
+                    feels like an achievement.
+                </div>
+
+                <button
+                    class="fake-button"
+                    onclick="openModal()"
+                >
+                    Continue
+                    <small>probably</small>
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+</main>
+
+
+<!-- ROUND UX NIGHTMARE -->
+
+<div class="modal-overlay" id="modal">
+    <div class="modal">
+
+        <button class="modal-close" onclick="closeModal()" aria-label="Close">
+            ×
+        </button>
+
+        <div class="modal-content">
+            <h2>One tiny question.</h2>
+
+            <p>
+                Are you absolutely sure you want to continue?
+                This decision may affect your experience.
+                Probably.
+            </p>
+
+            <div class="modal-actions">
+                <button onclick="closeModal()">
+                    No
+                </button>
+
+                <button
+                    class="confirm"
+                    onclick="confirmAction()"
+                >
+                    Yes
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="toast" id="toast">
+    Congratulations. Nothing happened.
+</div>
+
+</body>
+</html>

@@ -1,0 +1,571 @@
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background:
+                radial-gradient(circle at 20% 20%, rgba(120, 80, 255, .18), transparent 30%),
+                radial-gradient(circle at 80% 70%, rgba(255, 80, 180, .14), transparent 30%),
+                #0c0c0f;
+            color: #f7f7f7;
+            overflow-x: hidden;
+        }
+
+        /* ---------- HEADER ---------- */
+
+        header {
+            width: 100%;
+            padding: 24px clamp(20px, 5vw, 72px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .logo {
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            font-size: 20px;
+        }
+
+        .logo span {
+            color: #FF6B35;
+        }
+
+        nav {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+        }
+
+        nav a {
+            color: #999;
+            text-decoration: none;
+            font-size: 14px;
+            transition: .2s;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        .nav-button {
+            padding: 10px 17px;
+            border: 1px solid #333;
+            border-radius: 100px;
+            background: rgba(255,255,255,.04);
+            color: white;
+            cursor: pointer;
+        }
+
+        /* ---------- HERO ---------- */
+
+        main {
+            min-height: calc(100vh - 80px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px 100px;
+        }
+
+        .hero {
+            width: min(1100px, 100%);
+            display: grid;
+            grid-template-columns: 1.15fr .85fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 12px;
+            border-radius: 100px;
+            border: 1px solid #29292f;
+            background: rgba(255,255,255,.035);
+            color: #aaa;
+            font-size: 12px;
+            margin-bottom: 24px;
+        }
+
+        .dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #72e68a;
+            box-shadow: 0 0 12px #72e68a;
+        }
+
+        h1 {
+            margin: 0;
+            max-width: 700px;
+            font-size: clamp(48px, 7vw, 88px);
+            line-height: .94;
+            letter-spacing: -.065em;
+        }
+
+        h1 span {
+            color: #FF6B35;
+        }
+
+        .subtitle {
+            margin: 28px 0 34px;
+            max-width: 580px;
+            color: #96969e;
+            font-size: clamp(16px, 2vw, 19px);
+            line-height: 1.55;
+        }
+
+        .subtitle strong {
+            color: #ddd;
+        }
+
+        /* ---------- FORM ---------- */
+
+        .signup {
+            display: flex;
+            max-width: 510px;
+            padding: 5px;
+            border-radius: 18px;
+            border: 1px solid #2b2b32;
+            background: rgba(255,255,255,.045);
+            backdrop-filter: blur(20px);
+        }
+
+        .signup input {
+            flex: 1;
+            min-width: 0;
+            border: 0;
+            outline: none;
+            background: transparent;
+            color: white;
+            padding: 15px 16px;
+            font-size: 15px;
+        }
+
+        .signup input::placeholder {
+            color: #5f5f67;
+        }
+
+        .signup button {
+            border: 0;
+            border-radius: 13px;
+            padding: 0 23px;
+            background: #f4f4f4;
+            color: #101014;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform .2s, background .2s;
+            white-space: nowrap;
+        }
+
+        .signup button:hover {
+            transform: translateY(-2px);
+            background: white;
+        }
+
+        .microcopy {
+            margin-top: 12px;
+            color: #51515a;
+            font-size: 11px;
+        }
+
+        /* ---------- CARD ---------- */
+
+        .visual {
+            position: relative;
+            min-height: 480px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            width: min(360px, 90vw);
+            padding: 26px;
+            border-radius: 28px;
+            border: 1px solid #292930;
+            background: linear-gradient(
+                145deg,
+                rgba(255,255,255,.09),
+                rgba(255,255,255,.025)
+            );
+            box-shadow:
+                0 40px 100px rgba(0,0,0,.45),
+                inset 0 1px rgba(255,255,255,.06);
+            transform: rotate(4deg);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            color: #777;
+            font-size: 12px;
+            margin-bottom: 30px;
+        }
+
+        .fake-title {
+            font-size: 30px;
+            font-weight: 750;
+            letter-spacing: -.04em;
+            margin-bottom: 12px;
+        }
+
+        .fake-text {
+            color: #777;
+            line-height: 1.5;
+            font-size: 14px;
+            margin-bottom: 28px;
+        }
+
+        .fake-button {
+            width: 100%;
+            padding: 15px;
+            border-radius: 14px;
+            background: #FF6B35;
+        border: 0;
+            color: #ffffff;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .fake-button small {
+            display: block;
+            opacity: .45;
+            margin-top: 3px;
+            font-weight: 400;
+        }
+
+        .floating {
+            position: absolute;
+            padding: 12px 16px;
+            border-radius: 14px;
+            background: #151519;
+            border: 1px solid #29292f;
+            color: #999;
+            font-size: 11px;
+            box-shadow: 0 15px 40px rgba(0,0,0,.3);
+        }
+
+        .floating.one {
+            top: 45px;
+            right: 0;
+            transform: rotate(-8deg);
+        }
+
+        .floating.two {
+            bottom: 40px;
+            left: 5px;
+            transform: rotate(6deg);
+        }
+
+/* ---------- MODAL ---------- */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .72);
+    backdrop-filter: blur(12px);
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 100;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal {
+    width: min(440px, 88vw);
+    aspect-ratio: 1;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #25252d,
+            #111116 70%
+        );
+
+    border: 1px solid #3a3a44;
+
+    box-shadow:
+        0 0 0 10px rgba(255, 255, 255, .015),
+        0 30px 100px rgba(0, 0, 0, .7);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    animation: modalSpin 7s linear infinite;
+}
+
+
+/* ---------- CLOSE BUTTON ---------- */
+
+.modal-close {
+    position: absolute;
+
+    top: 28px;
+    right: 50%;
+
+    transform: translateX(50%);
+
+    width: 36px;
+    height: 36px;
+
+    border: 1px solid #383840;
+    border-radius: 50%;
+
+    background: #1b1b21;
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    z-index: 2;
+
+    /*
+        Компенсируем вращение модалки,
+        чтобы кнопка оставалась неподвижной.
+    */
+    animation: closeCounterSpin 7s linear infinite;
+
+    transition:
+        background .2s,
+        border-color .2s,
+        transform .2s;
+}
+
+.modal-close:hover {
+    background: #292932;
+    border-color: #555562;
+}
+
+
+/* ---------- MODAL ROTATION ---------- */
+
+@keyframes modalSpin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ---------- CONTENT ROTATION ---------- */
+
+.modal-content {
+    width: 70%;
+    text-align: center;
+
+    animation: contentCounterSpin 5s linear infinite;
+}
+
+@keyframes contentCounterSpin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+
+/* ---------- CLOSE BUTTON COUNTER ROTATION ---------- */
+
+@keyframes closeCounterSpin {
+    from {
+        transform: translateX(50%) rotate(0deg);
+    }
+
+    to {
+        transform: translateX(50%) rotate(-360deg);
+    }
+}
+
+
+/* ---------- TEXT ---------- */
+
+.modal h2 {
+    margin: 0 0 12px;
+
+    font-size: 24px;
+    letter-spacing: -.04em;
+}
+
+.modal p {
+    color: #85858e;
+
+    font-size: 13px;
+    line-height: 1.5;
+
+    margin-bottom: 24px;
+}
+
+
+/* ---------- ACTIONS ---------- */
+
+.modal-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.modal-actions button {
+    border: 1px solid #383840;
+
+    background: #1b1b21;
+    color: white;
+
+    padding: 12px 18px;
+
+    border-radius: 100px;
+
+    cursor: pointer;
+
+    font-size: 12px;
+
+    transition: .2s;
+}
+
+.modal-actions button:hover {
+    background: #292932;
+}
+
+.modal-actions .confirm {
+    background: #FF6B35;
+    border-color: #FF6B35;
+    color: #ffffff;
+}
+
+        /* ---------- TOAST ---------- */
+
+        .toast {
+            position: fixed;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            padding: 14px 20px;
+            border-radius: 100px;
+            background: #f4f4f4;
+            color: #111;
+            font-size: 13px;
+            font-weight: 600;
+            z-index: 200;
+            transition: .4s;
+            white-space: nowrap;
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+        }
+
+        /* ---------- MOBILE ---------- */
+
+        @media (max-width: 800px) {
+
+            header {
+                padding: 20px;
+            }
+
+            nav a {
+                display: none;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            main {
+                padding-top: 35px;
+            }
+
+            .visual {
+                min-height: 370px;
+            }
+
+            .card {
+                width: min(330px, 88vw);
+            }
+
+            .floating.one {
+                right: 2%;
+            }
+
+            .floating.two {
+                left: 2%;
+            }
+        }
+
+        @media (max-width: 520px) {
+
+            h1 {
+                font-size: clamp(46px, 15vw, 70px);
+            }
+
+            .subtitle {
+                font-size: 16px;
+            }
+
+            .signup {
+                flex-direction: column;
+                padding: 6px;
+                gap: 5px;
+            }
+
+            .signup input {
+                padding: 15px;
+            }
+
+            .signup button {
+                min-height: 50px;
+            }
+
+            .visual {
+                min-height: 330px;
+            }
+
+            .floating {
+                font-size: 10px;
+            }
+
+            .modal {
+                width: 82vw;
+            }
+
+            .modal h2 {
+                font-size: 20px;
+            }
+
+            .modal-actions button {
+                padding: 10px 13px;
+            }
+        }
